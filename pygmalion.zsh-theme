@@ -33,7 +33,7 @@ prompt_pygmalion_precmd(){
 
   local nl=""
 
-  if [[ $prompt_length -gt 50 ]]; then
+  if [[ $prompt_length -gt 100 ]]; then
     nl=$'\n';
   fi
   pipe='%{$fg[red]%}|%{$reset_color%}'
