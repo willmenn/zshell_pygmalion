@@ -6,17 +6,18 @@ prompt_setup_pygmalion(){
   ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}⚡%{$reset_color%}"
   ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-  base_prompt="%(1V. (%1v) .)%{$fg[magenta]%}%n%{$reset_color%}%{$fg[cyan]%}@%{$reset_color%}%{$fg[yellow]%}%m%{$reset_color%}%{$fg[red]%}:%{$reset_color%}%{$fg[cyan]%}%0~%{$reset_color%}"
+  virtualenv_format="%(1V.%{$fg[green]%} (%1v).%{$reset_color%}) "
+  base_prompt="$virtualenv_format%{$fg[magenta]%}%n%{$reset_color%}%{$fg[cyan]%}@%{$reset_color%}%{$fg[yellow]%}%m%{$reset_color%}%{$fg[red]%}:%{$reset_color%}%{$fg[cyan]%}%0~%{$reset_color%}"
   post_prompt='%{$fg[cyan]%}⇒%{$reset_color%}  '
 
   base_prompt_nocolor=$(echo "$base_prompt" | perl -pe "s/%\{[^}]+\}//g")
   post_prompt_nocolor=$(echo "$post_prompt" | perl -pe "s/%\{[^}]+\}//g")
 
-  precmd_functions+=(virtualenv)
+  precmd_functions+=(virtualenv_name)
   precmd_functions+=(prompt_pygmalion_precmd)
 }
 
-function virtualenv {
+function virtualenv_name {
     if [[ -z $VIRTUAL_ENV ]] then
         psvar[1]=''
     else
