@@ -33,17 +33,24 @@ prompt_pygmalion_precmd(){
   local nl=$'\n'
 
   pipe='%{$fg[red]%}|%{$reset_color%}'
-  PROMPT="$base_prompt$gitinfo $post_prompt"	  
+  PROMPT="$base_prompt$gitinfo "	  
   if [ ! -z "$gitinfo" -a "$gitinfo"!=" "  ]; then
-    PROMPT="$base_prompt$pipe$gitinfo $post_prompt"
+    PROMPT="$base_prompt$pipe$gitinfo"
   fi
+
   home=$(pwd) 
   if [[ $HOME == $home ]]; then
     PROMPT="$base_prompt$pipe$post_prompt"
+  else
+  	if [[ $prompt_length -gt 40 ]]; then
+     		PROMPT_PREFIX=" $nl $post_prompt"
+     		PROMPT=$PROMPT$PROMPT_PREFIX
+  	else
+     		PROMPT=$PROMPT" $post_prompt"
+  	fi
   fi
-  if [[ $prompt_length -gt 80 ]]; then
-     PROMPT=$PROMPT$nl;
-  fi
+
+
 
 }
 
