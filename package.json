@@ -1,0 +1,23 @@
+{
+  "name": "zshell_pygmalion",
+  "version": "1.0.0",
+  "description": "### zshell pygmalion theme improved",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willmenn/zshell_pygmalion.git"
+  },
+  "author": "William Ahrons",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/willmenn/zshell_pygmalion/issues"
+  },
+  "homepage": "https://github.com/willmenn/zshell_pygmalion#readme",
+  "keywords": [
+    "zshell",
+    "pygmalion"
+  ]
+}
