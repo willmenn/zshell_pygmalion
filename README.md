@@ -8,3 +8,12 @@
 
 ![demo](demo.png)
 
+
+### To install:
+
+
+`npm install`
+
+or
+
+`./install.sh`
