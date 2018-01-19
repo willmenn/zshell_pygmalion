@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 rm $ZSH/themes/pygmalion.zsh-theme
 ln -s $(pwd)/pygmalion.zsh-theme $ZSH/themes/pygmalion.zsh-theme
 mv ~/.zshrc ~/.zshrc.bak
