@@ -1,5 +1,7 @@
 # zshell_pygmalion
 
+[![Build Status](https://travis-ci.org/willmenn/zshell_pygmalion.svg?branch=master)](https://travis-ci.org/willmenn/zshell_pygmalion)
+
 ### zshell pygmalion theme improved
 
 - The arrow will always appear, and if the length of the prompt is to big it will break to the next line.
