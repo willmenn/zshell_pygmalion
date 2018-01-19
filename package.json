@@ -4,7 +4,8 @@
   "description": "### zshell pygmalion theme improved",
   "main": "index.js",
   "scripts": {
-	  "install": "./install.sh"
+    "lint:package": "pjv --recommendations --warnings",
+    "install": "./install.sh"
   },
   "repository": {
     "type": "git",
@@ -15,9 +16,16 @@
   "bugs": {
     "url": "https://github.com/willmenn/zshell_pygmalion/issues"
   },
+  "contributors": [
+    "William Ahrons (https://github.com/willmenn)",
+    "Luiz Felipe Schleder (https://github.com/this-luiz)"
+  ],
   "homepage": "https://github.com/willmenn/zshell_pygmalion#readme",
   "keywords": [
     "zshell",
     "pygmalion"
-  ]
+  ],
+  "devDependencies": {
+    "package-json-validator": "^0.6.3"
+  }
 }
